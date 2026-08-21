@@ -1,11 +1,573 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Meysam Varasteh</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Meysam Varasteh</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      color: #222;
+      background: #fff;
+      line-height: 1.65;
+    }
+
+    a {
+      color: #1769aa;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------------- NAVIGATION ---------------- */
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid #eee;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: #222;
+    }
+
+    .nav-links a {
+      margin-left: 24px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    /* ---------------- MAIN ---------------- */
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: 65px 0;
+    }
+
+    h1 {
+      font-size: 46px;
+      margin: 0 0 10px;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+    }
+
+    /* ---------------- HERO ---------------- */
+
+    .hero {
+      padding: 100px 0 80px;
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-photo {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #eee;
+    }
+
+    .subtitle {
+      font-size: 21px;
+      color: #555;
+      margin-bottom: 8px;
+    }
+
+    .research-line {
+      font-size: 18px;
+      color: #666;
+    }
+
+    .buttons {
+      margin-top: 25px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: 9px 16px;
+      border: 1px solid #1769aa;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    .button:hover {
+      background: #1769aa;
+      color: white;
+      text-decoration: none;
+    }
+
+    /* ---------------- ABOUT ---------------- */
+
+    .about-text {
+      max-width: 850px;
+      font-size: 17px;
+    }
+
+    /* ---------------- RESEARCH ---------------- */
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .research-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 25px;
+      transition: 0.2s;
+    }
+
+    .research-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .research-card h3 {
+      margin-top: 0;
+    }
+
+    .links {
+      margin-top: 15px;
+    }
+
+    .links a {
+      margin-right: 15px;
+      font-weight: 500;
+    }
+
+    /* ---------------- PUBLICATIONS ---------------- */
+
+    .publication {
+      margin-bottom: 30px;
+    }
+
+    .publication-title {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .publication-authors {
+      margin-top: 4px;
+    }
+
+    .publication-venue {
+      color: #555;
+      font-style: italic;
+    }
+
+    /* ---------------- INTERESTS ---------------- */
+
+    .interests {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .interest {
+      background: #f3f5f7;
+      padding: 7px 13px;
+      border-radius: 20px;
+    }
+
+    /* ---------------- FOOTER ---------------- */
+
+    footer {
+      border-top: 1px solid #eee;
+      padding: 35px 0;
+      text-align: center;
+      color: #777;
+      font-size: 14px;
+    }
+
+    /* ---------------- MOBILE ---------------- */
+
+    @media (max-width: 750px) {
+
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 60px;
+      }
+
+      .hero-photo {
+        width: 180px;
+        height: 180px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .research-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-container {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        margin-top: 10px;
+      }
+
+      .nav-links a {
+        margin: 0 8px;
+      }
+    }
+  </style>
+
 </head>
+
 <body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+  <div class="nav-container">
+
+    <a class="nav-name" href="#">Meysam Varasteh</a>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#cv">CV</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+  </div>
+</nav>
+
+
+<main class="container">
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+  <div class="hero-text">
+
     <h1>Meysam Varasteh</h1>
-    <p>PhD Student in Computer Science</p>
-    <p>Research: Recommender Systems, Explainability, and Interpretability</p>
+
+    <div class="subtitle">
+      PhD Student in Computer Science
+    </div>
+
+    <div class="research-line">
+      Recommender Systems · Explainable AI · Interpretability
+    </div>
+
+    <div class="buttons">
+
+      <a class="button" href="cv.pdf" target="_blank">
+        CV
+      </a>
+
+      <a class="button"
+         href="YOUR_GOOGLE_SCHOLAR_LINK"
+         target="_blank">
+        Google Scholar
+      </a>
+
+      <a class="button"
+         href="https://github.com/meysamvarasteh92"
+         target="_blank">
+        GitHub
+      </a>
+
+      <a class="button"
+         href="YOUR_LINKEDIN_LINK"
+         target="_blank">
+        LinkedIn
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!--
+  Later upload your picture to GitHub as profile.jpg
+  and remove the comment symbols around this image.
+  -->
+
+  <!--
+  <img
+    src="profile.jpg"
+    alt="Meysam Varasteh"
+    class="hero-photo">
+  -->
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+  <h2>About Me</h2>
+
+  <div class="about-text">
+
+    <p>
+      I am a PhD student in Computer Science at the University of
+      Colorado Boulder. My research focuses on recommender systems,
+      explainability, and interpretability.
+    </p>
+
+    <p>
+      I am particularly interested in understanding how recommendation
+      algorithms make decisions and how these decisions affect different
+      stakeholders. A major direction of my research is transparency in
+      recommender systems, especially from the perspective of item and
+      content providers.
+    </p>
+
+    <p>
+      More broadly, I am interested in interpretable machine learning,
+      explainable AI, human-centered recommender systems, and responsible
+      recommendation.
+    </p>
+
+  </div>
+
+
+  <h3>Research Interests</h3>
+
+  <div class="interests">
+    <span class="interest">Recommender Systems</span>
+    <span class="interest">Explainable AI</span>
+    <span class="interest">Interpretability</span>
+    <span class="interest">Transparency</span>
+    <span class="interest">Provider-Side Recommendation</span>
+    <span class="interest">Contrastive Explanations</span>
+  </div>
+
+</section>
+
+
+<!-- ================= RESEARCH ================= -->
+
+<section id="research">
+
+  <h2>Selected Research</h2>
+
+  <div class="research-grid">
+
+
+    <!-- PROJECT 1 -->
+
+    <div class="research-card">
+
+      <h3>
+        Recommendation Transparency for Providers
+      </h3>
+
+      <p>
+        We study how item providers can better understand why their
+        content receives more or less exposure in recommender systems.
+        Our work develops system-level explanations for understanding
+        the factors driving recommendation exposure.
+      </p>
+
+      <div class="links">
+        <a href="#">Paper</a>
+        <a href="#">Code</a>
+        <a href="#">arXiv</a>
+      </div>
+
+    </div>
+
+
+    <!-- PROJECT 2 -->
+
+    <div class="research-card">
+
+      <h3>
+        Contrastive Explanations for Recommender Systems
+      </h3>
+
+      <p>
+        We investigate contrastive explanations for recommender systems,
+        focusing on questions such as why one recommendation outcome
+        occurred instead of another.
+      </p>
+
+      <div class="links">
+        <a href="#">Paper</a>
+        <a href="#">Code</a>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PUBLICATIONS ================= -->
+
+<section id="publications">
+
+  <h2>Publications</h2>
+
+
+  <div class="publication">
+
+    <div class="publication-title">
+      Why Didn't More People See It? Recommendation Transparency
+      for Provider Stakeholders
+    </div>
+
+    <div class="publication-authors">
+      Meysam Varasteh, et al.
+    </div>
+
+    <div class="publication-venue">
+      IntRS Workshop @ ACM RecSys 2026
+    </div>
+
+    <div class="links">
+      <a href="#">Paper</a>
+      <a href="#">arXiv</a>
+      <a href="#">Code</a>
+    </div>
+
+  </div>
+
+
+  <div class="publication">
+
+    <div class="publication-title">
+      Your Second Publication Title
+    </div>
+
+    <div class="publication-authors">
+      Meysam Varasteh, Collaborator Name, et al.
+    </div>
+
+    <div class="publication-venue">
+      Conference / Workshop, 2026
+    </div>
+
+    <div class="links">
+      <a href="#">Paper</a>
+      <a href="#">Code</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CV ================= -->
+
+<section id="cv">
+
+  <h2>CV</h2>
+
+  <p>
+    You can view my current curriculum vitae below.
+  </p>
+
+  <a class="button"
+     href="cv.pdf"
+     target="_blank">
+     View CV
+  </a>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+  <h2>Contact</h2>
+
+  <p>
+    I am interested in research collaborations and opportunities related
+    to recommender systems, explainability, and interpretable machine
+    learning.
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    YOUR_EMAIL@colorado.edu
+  </p>
+
+  <p>
+    <strong>GitHub:</strong>
+    <a href="https://github.com/meysamvarasteh92"
+       target="_blank">
+       github.com/meysamvarasteh92
+    </a>
+  </p>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  © 2026 Meysam Varasteh ·
+  <a href="https://varastehmeysam.com">
+    varastehmeysam.com
+  </a>
+
+</footer>
+
 </body>
 </html>
