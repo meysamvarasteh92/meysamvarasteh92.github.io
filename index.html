@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Meysam Varasteh — PhD student in Computer Science at the University of Colorado Boulder. Research in recommender systems, interpretability, controllability, and responsible AI.">
-  <title>Meysam Varasteh</title>
+  <meta name="description" content="Meysam Varasteh — PhD researcher in recommender systems at the University of Colorado Boulder, working on interpretability, controllability, and multi-stakeholder recommendation.">
+  <meta name="keywords" content="Meysam Varasteh, recommender systems, machine learning, interpretability, controllability, personalization, ranking, explainable AI, University of Colorado Boulder">
+  <meta name="author" content="Meysam Varasteh">
+  <title>Meysam Varasteh | Recommender Systems Researcher</title>
 
   <style>
     :root {
       --ink: #17202a;
       --muted: #5e6874;
       --paper: #ffffff;
-      --soft: #f6f7f8;
-      --line: #e5e8eb;
+      --soft: #f6f8fa;
+      --line: #e4e9ee;
       --accent: #1769aa;
       --accent-dark: #0f4f83;
       --gold: #cfb87c;
-      --shadow: 0 18px 50px rgba(12, 28, 44, 0.12);
+      --shadow: 0 20px 55px rgba(12, 28, 44, 0.12);
       --radius: 18px;
     }
 
@@ -45,9 +47,9 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255,255,255,0.92);
+      background: rgba(255, 255, 255, 0.93);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(229,232,235,0.9);
+      border-bottom: 1px solid rgba(229, 232, 235, 0.9);
     }
 
     .nav-inner {
@@ -68,26 +70,25 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 26px;
-      font-size: 0.95rem;
-      font-weight: 600;
+      gap: 24px;
+      font-size: 0.93rem;
+      font-weight: 650;
+      white-space: nowrap;
     }
 
     .nav-links a { color: #3a4652; }
     .nav-links a:hover { color: var(--accent); }
 
     /* ---------- Hero ---------- */
-    .hero-wrap {
-      padding: 30px 0 0;
-    }
+    .hero-wrap { padding: 28px 0 0; }
 
     .hero {
       position: relative;
-      min-height: 510px;
+      min-height: 535px;
       overflow: hidden;
       border-radius: 26px;
       background-image:
-        linear-gradient(90deg, rgba(10, 22, 34, 0.74) 0%, rgba(10, 22, 34, 0.54) 49%, rgba(10, 22, 34, 0.22) 100%),
+        linear-gradient(90deg, rgba(8, 20, 32, 0.90) 0%, rgba(8, 20, 32, 0.76) 50%, rgba(8, 20, 32, 0.42) 100%),
         url("background.JPG");
       background-size: cover;
       background-position: center 42%;
@@ -110,53 +111,87 @@
       width: 100%;
       padding: 62px 64px;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 270px;
+      grid-template-columns: minmax(0, 1fr) 255px;
       gap: 62px;
       align-items: center;
     }
 
-    .hero-copy {
-      max-width: 690px;
-      padding: 30px 32px;
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 18px;
-      background: rgba(10, 22, 34, 0.72);
-      backdrop-filter: blur(9px);
-      box-shadow: 0 16px 42px rgba(0,0,0,0.17);
+    .hero-copy { max-width: 720px; }
+
+    .availability {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding: 6px 10px;
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.09);
+      color: rgba(255,255,255,0.88);
+      font-size: 0.78rem;
+      font-weight: 750;
+      letter-spacing: 0.02em;
+    }
+
+    .availability-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 4px rgba(207,184,124,0.14);
     }
 
     .eyebrow {
-      margin: 0 0 10px;
+      margin: 0 0 9px;
       color: #f2dfaa;
       font-size: 0.82rem;
       font-weight: 800;
-      letter-spacing: 0.13em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
     }
 
     h1 {
       margin: 0;
       color: #fff;
-      font-size: clamp(2.55rem, 5vw, 4.25rem);
-      line-height: 1.04;
-      letter-spacing: -0.045em;
+      font-size: clamp(2.7rem, 5vw, 4.45rem);
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+    }
+
+    .hero-title {
+      margin: 15px 0 7px;
+      color: #fff;
+      font-size: clamp(1.25rem, 2.4vw, 1.7rem);
+      line-height: 1.3;
+      font-weight: 720;
+      letter-spacing: -0.02em;
     }
 
     .hero-role {
-      margin: 14px 0 7px;
-      color: #f7f9fb;
-      font-size: clamp(1.05rem, 2vw, 1.28rem);
-      font-weight: 650;
+      margin: 0 0 14px;
+      color: rgba(255,255,255,0.76);
+      font-size: 0.98rem;
+      font-weight: 600;
     }
 
     .hero-research {
       margin: 0;
-      color: rgba(255,255,255,0.80);
-      font-size: 1rem;
+      max-width: 650px;
+      color: rgba(255,255,255,0.86);
+      font-size: 1.04rem;
+      line-height: 1.65;
+    }
+
+    .hero-keywords {
+      margin-top: 18px;
+      color: #f0ddb0;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
     }
 
     .hero-actions {
-      margin-top: 27px;
+      margin-top: 28px;
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -172,8 +207,8 @@
       border: 1px solid rgba(255,255,255,0.42);
       color: #fff;
       background: rgba(255,255,255,0.08);
-      font-size: 0.92rem;
-      font-weight: 700;
+      font-size: 0.91rem;
+      font-weight: 720;
       transition: transform .16s ease, background .16s ease, border-color .16s ease;
     }
 
@@ -190,16 +225,12 @@
       border-color: #fff;
     }
 
-    .button.primary:hover {
-      color: var(--ink);
-      background: #f2f3f5;
-    }
+    .button.primary:hover { color: var(--ink); background: #f2f3f5; }
 
-    /* Your photo lives here */
     .photo-frame {
       justify-self: end;
-      width: 250px;
-      height: 250px;
+      width: 245px;
+      height: 245px;
       padding: 8px;
       border-radius: 50%;
       background: rgba(255,255,255,0.96);
@@ -239,11 +270,12 @@
     }
 
     /* ---------- Main content ---------- */
-    main { padding: 30px 0 72px; }
+    main { padding: 28px 0 72px; }
 
     section.content-section {
-      padding: 62px 0;
+      padding: 64px 0;
       border-bottom: 1px solid var(--line);
+      scroll-margin-top: 78px;
     }
 
     .section-heading {
@@ -255,13 +287,23 @@
 
     h2 {
       margin: 0;
-      font-size: 1.5rem;
+      font-size: 1.45rem;
       letter-spacing: -0.025em;
     }
 
-    .section-body { max-width: 820px; }
+    .section-kicker {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--accent);
+      font-size: 0.76rem;
+      font-weight: 850;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .section-body { max-width: 860px; }
     .section-body > :first-child { margin-top: 0; }
-    .section-body p { color: #35414d; font-size: 1.03rem; }
+    .section-body p { color: #35414d; font-size: 1.02rem; }
 
     .interest-list {
       display: flex;
@@ -276,72 +318,111 @@
       border-radius: 999px;
       background: #f8f9fa;
       color: #46515c;
-      font-size: 0.86rem;
+      font-size: 0.84rem;
       font-weight: 650;
     }
 
     /* ---------- Research cards ---------- */
     .research-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
+      grid-template-columns: 1fr;
+      gap: 17px;
     }
 
     .research-card {
-      min-height: 250px;
-      padding: 27px;
+      position: relative;
+      padding: 28px 30px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: #fff;
-      box-shadow: 0 7px 22px rgba(16, 35, 52, 0.05);
+      box-shadow: 0 7px 22px rgba(16, 35, 52, 0.045);
       transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
     }
 
     .research-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 14px 34px rgba(16, 35, 52, 0.10);
-      border-color: #d3d9de;
+      transform: translateY(-2px);
+      box-shadow: 0 14px 34px rgba(16, 35, 52, 0.09);
+      border-color: #d2d9df;
+    }
+
+    .research-topline {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: flex-start;
     }
 
     .research-card .number {
       color: var(--accent);
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: 850;
       letter-spacing: .12em;
     }
 
+    .venue-badge {
+      flex: none;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: #eef5fb;
+      border: 1px solid #d8e8f5;
+      color: #315d80;
+      font-size: 0.75rem;
+      font-weight: 780;
+    }
+
     .research-card h3 {
-      margin: 11px 0 10px;
-      font-size: 1.16rem;
+      margin: 10px 0 3px;
+      font-size: 1.2rem;
       line-height: 1.35;
+    }
+
+    .research-subtitle {
+      margin: 0 0 12px !important;
+      color: #3a4855 !important;
+      font-weight: 700;
+      font-size: 0.94rem !important;
     }
 
     .research-card p {
       margin: 0;
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: 0.94rem;
+    }
+
+    .research-meta {
+      margin-top: 16px;
+      color: #53606c;
+      font-size: 0.82rem;
+      font-weight: 650;
     }
 
     .inline-links {
       display: flex;
       flex-wrap: wrap;
       gap: 17px;
-      margin-top: 20px;
-      font-size: 0.9rem;
+      margin-top: 18px;
+      font-size: 0.88rem;
       font-weight: 750;
     }
 
     /* ---------- Publications ---------- */
+    .year-label {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 850;
+      letter-spacing: .12em;
+    }
+
     .publication {
       padding: 22px 0;
       border-bottom: 1px solid var(--line);
     }
 
-    .publication:first-child { padding-top: 0; }
     .publication:last-child { border-bottom: 0; padding-bottom: 0; }
 
     .publication-title {
-      font-size: 1.04rem;
+      font-size: 1.03rem;
       line-height: 1.45;
       font-weight: 800;
       color: var(--ink);
@@ -350,15 +431,78 @@
     .publication-authors {
       margin-top: 6px;
       color: #4c5762;
-      font-size: 0.94rem;
+      font-size: 0.93rem;
     }
+
+    .publication-authors strong { color: var(--ink); }
 
     .publication-venue {
       margin-top: 3px;
       color: var(--muted);
-      font-size: 0.92rem;
+      font-size: 0.91rem;
       font-style: italic;
     }
+
+    /* ---------- Skills ---------- */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .skill-card {
+      padding: 20px 22px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--soft);
+    }
+
+    .skill-card h3 {
+      margin: 0 0 7px;
+      font-size: 0.94rem;
+      letter-spacing: -0.01em;
+    }
+
+    .skill-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* ---------- Experience / Education ---------- */
+    .timeline-item {
+      position: relative;
+      padding: 0 0 28px 22px;
+      border-left: 1px solid #dfe5ea;
+    }
+
+    .timeline-item:last-child { padding-bottom: 0; }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -5px;
+      top: 7px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .timeline-title {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 800;
+    }
+
+    .timeline-meta {
+      margin: 2px 0 7px;
+      color: var(--muted);
+      font-size: 0.89rem;
+      font-weight: 650;
+    }
+
+    .timeline-item p { margin: 0; font-size: 0.94rem; }
 
     /* ---------- CV / Contact ---------- */
     .light-card {
@@ -375,7 +519,7 @@
       border-radius: 9px;
       background: var(--accent);
       color: #fff;
-      font-size: 0.92rem;
+      font-size: 0.91rem;
       font-weight: 750;
     }
 
@@ -392,13 +536,13 @@
     footer {
       padding: 28px 0 42px;
       color: #737d86;
-      font-size: 0.88rem;
+      font-size: 0.87rem;
       text-align: center;
     }
 
     /* ---------- Responsive ---------- */
     @media (max-width: 850px) {
-      .nav-links { gap: 14px; font-size: .88rem; }
+      .nav-links { gap: 14px; font-size: .87rem; }
 
       .hero-content {
         grid-template-columns: 1fr;
@@ -413,9 +557,8 @@
         height: 190px;
       }
 
-      .hero-copy { max-width: none; }
       .section-heading { grid-template-columns: 1fr; gap: 22px; }
-      .research-grid { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 650px) {
@@ -426,11 +569,11 @@
 
       .hero-wrap { padding-top: 16px; }
       .hero { min-height: 0; border-radius: 18px; background-position: center; }
-      .hero-content { padding: 30px 20px 35px; }
-      .hero-copy { padding: 24px 22px; }
+      .hero-content { padding: 30px 22px 36px; }
       .photo-frame { width: 155px; height: 155px; }
       section.content-section { padding: 48px 0; }
-      .research-card { min-height: 0; }
+      .research-card { padding: 24px 22px; }
+      .research-topline { flex-direction: column; gap: 8px; }
     }
   </style>
 </head>
@@ -443,8 +586,8 @@
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
         <a href="#cv">CV</a>
-        <a href="#contact">Contact</a>
       </div>
     </div>
   </nav>
@@ -453,27 +596,32 @@
     <header class="hero">
       <div class="hero-content">
         <div class="hero-copy">
-          <p class="eyebrow">Recommender Systems · Explainable AI</p>
+          <div class="availability"><span class="availability-dot"></span>Seeking Summer 2027 Research / Applied ML Internships</div>
+          <p class="eyebrow">Recommender Systems · Machine Learning</p>
           <h1>Meysam Varasteh</h1>
-          <p class="hero-role">PhD Student in Computer Science · University of Colorado Boulder</p>
-          <p class="hero-research">Interpretability · Controllability · Transparency · Responsible Recommendation</p>
+          <p class="hero-title">PhD Researcher in Recommender Systems</p>
+          <p class="hero-role">Computer Science · University of Colorado Boulder</p>
+          <p class="hero-research">
+            I develop interpretable and controllable recommender systems, with a focus on understanding and steering how recommendation models make decisions for different stakeholders.
+          </p>
+          <p class="hero-keywords">Interpretability · Controllability · Multi-Stakeholder Recommendation · Personalization</p>
 
           <div class="hero-actions">
-            <a class="button primary" href="cv.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
+            <a class="button primary" href="Meysam_Varasteh_2026_pdf.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
             <a class="button" href="https://scholar.google.com/citations?user=hedCdogAAAAJ&hl=en&oi=sra" target="_blank" rel="noopener noreferrer">Google Scholar</a>
             <a class="button" href="https://github.com/meysamvarasteh92" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a class="button" href="https://www.linkedin.com/in/meysam-varasteh/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
         </div>
 
-        <!-- Put your portrait in the same GitHub folder and name it profile.jpg -->
+        <!-- Keep profile.jpg in the same GitHub Pages folder as this file. -->
         <div class="photo-frame" aria-label="Profile photo area">
           <img
             class="hero-photo"
             src="profile.jpg"
             alt="Meysam Varasteh"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div class="photo-placeholder">Your photo<span>profile.jpg</span></div>
+          <div class="photo-placeholder">Profile photo<span>profile.jpg</span></div>
         </div>
       </div>
     </header>
@@ -482,26 +630,26 @@
   <main class="site-shell">
     <section class="content-section" id="about">
       <div class="section-heading">
-        <h2>About</h2>
+        <div>
+          <span class="section-kicker">Profile</span>
+          <h2>About</h2>
+        </div>
         <div class="section-body">
           <p>
-            I am a PhD student in Computer Science at the University of Colorado Boulder,
-            supervised by Professor
+            I am a PhD student in Computer Science at the University of Colorado Boulder, advised by Professor
             <a href="https://scholar.google.com/citations?user=wRwI6d0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Robin Burke</a>.
-            My research broadly focuses on recommender systems, explainable and controllable machine learning, and responsible AI.
+            My research focuses on <strong>interpretable and controllable recommender systems</strong>, particularly in multi-stakeholder environments.
           </p>
           <p>
-            I am particularly interested in understanding how recommendation algorithms make decisions and how those decisions affect different stakeholders. A major direction of my research is transparency in recommender systems, especially from the perspective of item and content providers.
+            I am interested in understanding why recommender systems make particular decisions, explaining those decisions to different stakeholders, and developing mechanisms that allow recommendation behavior to be meaningfully controlled. My current work spans provider-side transparency, counterfactual and comparative explanations, and controllable recommendation models.
           </p>
 
           <div class="interest-list" aria-label="Research interests">
             <span class="tag">Recommender Systems</span>
-            <span class="tag">Explainable AI</span>
             <span class="tag">Interpretability</span>
             <span class="tag">Controllability</span>
-            <span class="tag">Transparency</span>
-            <span class="tag">Provider-Side Recommendation</span>
-            <span class="tag">Contrastive Explanations</span>
+            <span class="tag">Multi-Stakeholder Recommendation</span>
+            <span class="tag">Personalization & Ranking</span>
           </div>
         </div>
       </div>
@@ -509,30 +657,56 @@
 
     <section class="content-section" id="research">
       <div class="section-heading">
-        <h2>Selected Research</h2>
+        <div>
+          <span class="section-kicker">Selected work</span>
+          <h2>Research</h2>
+        </div>
         <div class="section-body research-grid">
           <article class="research-card">
-            <div class="number">01</div>
-            <h3>Recommendation Transparency for Providers</h3>
+            <div class="research-topline">
+              <div class="number">01 · PROVIDER TRANSPARENCY</div>
+              <span class="venue-badge">IntRS @ RecSys 2026</span>
+            </div>
+            <h3>Why Didn't More People See It?</h3>
+            <p class="research-subtitle">Recommendation Transparency for Providers</p>
             <p>
-              We study how item providers can better understand why their content receives more or less exposure in recommender systems, including system-level explanations of the factors driving exposure.
+              Developed a surrogate-modeling framework that approximates recommender-system exposure behavior and quantifies feature contributions to explain why content receives more or less exposure across the user population.
             </p>
+            <div class="research-meta">Surrogate Models · Exposure · Interpretability · Multi-Stakeholder Recommendation</div>
             <div class="inline-links">
-              <a href="#">Paper</a>
-              <a href="#">Code</a>
-              <a href="#">arXiv</a>
+              <a href="#pub-provider">Publication details</a>
             </div>
           </article>
 
           <article class="research-card">
-            <div class="number">02</div>
-            <h3>Contrastive Explanations for Recommender Systems</h3>
+            <div class="research-topline">
+              <div class="number">02 · COUNTERFACTUAL EXPLANATIONS</div>
+              <span class="venue-badge">IntRS @ RecSys 2026</span>
+            </div>
+            <h3>Why This, Not That?</h3>
+            <p class="research-subtitle">Pairwise Counterfactual Explanations for Recommender Systems</p>
             <p>
-              We investigate contrastive explanations for recommender systems, focusing on questions such as why one recommendation outcome occurred instead of another.
+              Developed methods to explain why one item is ranked above another by identifying interactions in a user's historical profile that contribute to the relative ranking of item pairs.
             </p>
+            <div class="research-meta">Counterfactuals · Ranking · Sequential Behavior · Explainability</div>
             <div class="inline-links">
-              <a href="#">Paper</a>
-              <a href="#">Code</a>
+              <a href="#pub-counterfactual">Publication details</a>
+            </div>
+          </article>
+
+          <article class="research-card">
+            <div class="research-topline">
+              <div class="number">03 · COMPARATIVE EXPLANATIONS</div>
+              <span class="venue-badge">IntRS @ RecSys 2024</span>
+            </div>
+            <h3>Comparative Explanations for Recommendation</h3>
+            <p class="research-subtitle">Research Directions</p>
+            <p>
+              Developed a taxonomy of comparative explanation approaches and studied how comparison-based explanations can improve recommendation transparency across stakeholders, with particular emphasis on item and content providers.
+            </p>
+            <div class="research-meta">Explainable AI · Comparative Explanations · Provider Perspective</div>
+            <div class="inline-links">
+              <a href="https://ceur-ws.org/Vol-3815/paper1.pdf" target="_blank" rel="noopener noreferrer">Paper</a>
             </div>
           </article>
         </div>
@@ -541,38 +715,139 @@
 
     <section class="content-section" id="publications">
       <div class="section-heading">
-        <h2>Publications</h2>
+        <div>
+          <span class="section-kicker">Selected papers</span>
+          <h2>Publications</h2>
+        </div>
         <div class="section-body">
+          <div class="year-label">2026</div>
+
+          <article class="publication" id="pub-provider">
+            <div class="publication-title">Why Didn't More People See It? Recommendation Transparency for Providers</div>
+            <div class="publication-authors"><strong>Meysam Varasteh</strong>, Robin Burke</div>
+            <div class="publication-venue">IntRS @ ACM RecSys 2026</div>
+          </article>
+
+          <article class="publication" id="pub-counterfactual">
+            <div class="publication-title">Why This, Not That? Mining User Profiles for Pair-wise Counterfactuals</div>
+            <div class="publication-authors"><strong>Meysam Varasteh</strong>, Veronika Bogina, Noam Koenigstein, Robin Burke</div>
+            <div class="publication-venue">IntRS @ ACM RecSys 2026</div>
+          </article>
+
+          <div class="year-label" style="margin-top: 28px;">2024</div>
+
           <article class="publication">
             <div class="publication-title">Comparative Explanations for Recommendation: Research Directions</div>
-            <div class="publication-authors">Meysam Varasteh, Elizabeth McKinnie, Amanda Aird, Daniel Acuña, Robin Burke</div>
+            <div class="publication-authors"><strong>Meysam Varasteh</strong>, Elizabeth McKinnie, Amanda Aird, Daniel Acuña, Robin Burke</div>
             <div class="publication-venue">IntRS Workshop @ ACM RecSys 2024</div>
             <div class="inline-links">
               <a href="https://ceur-ws.org/Vol-3815/paper1.pdf" target="_blank" rel="noopener noreferrer">Paper</a>
-              <a href="#">Code</a>
+            </div>
+          </article>
+
+          <div class="year-label" style="margin-top: 28px;">2023</div>
+
+          <article class="publication">
+            <div class="publication-title">An Improved Hybrid Recommender System: Integrating Document Context-Based and Behavior-Based Methods</div>
+            <div class="publication-authors"><strong>Meysam Varasteh</strong>, Mehdi Soleiman Nejad, Hadi Moradi, Mohammad Amin Sadeghi, Ahmad Kalhor</div>
+            <div class="publication-venue">31st International Conference on Electrical Engineering (ICEE 2023)</div>
+            <div class="inline-links">
+              <a href="https://ieeexplore.ieee.org/abstract/document/10334913" target="_blank" rel="noopener noreferrer">Paper</a>
             </div>
           </article>
 
           <article class="publication">
-            <div class="publication-title">An Improved Hybrid Recommender System: Integrating Document Context-Based and Behavior-Based Methods</div>
-            <div class="publication-authors">Meysam Varasteh, Mehdi Soleiman Nejad, Hadi Morad, Mohammad Amin Sadeghi, Ahmad Kalhor</div>
-            <div class="publication-venue">2023 31st International Conference on Electrical Engineering (ICEE)</div>
-            <div class="inline-links">
-              <a href="https://ieeexplore.ieee.org/abstract/document/10334913" target="_blank" rel="noopener noreferrer">Paper</a>
-              <a href="#">Code</a>
-            </div>
+            <div class="publication-title">Designing a Sequential Recommendation System for Heterogeneous Interactions Using Transformers</div>
+            <div class="publication-authors">Mehdi Soleiman Nejad, <strong>Meysam Varasteh</strong>, Hadi Moradi, Mohammad Amin Sadeghi</div>
+            <div class="publication-venue">Sequential recommender systems using Transformers</div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="skills">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">Technical</span>
+          <h2>Skills</h2>
+        </div>
+        <div class="section-body skills-grid">
+          <div class="skill-card">
+            <h3>Machine Learning</h3>
+            <p>PyTorch (CUDA), Hugging Face, TensorFlow, scikit-learn, Transformers, activation steering</p>
+          </div>
+          <div class="skill-card">
+            <h3>Programming</h3>
+            <p>Python, C++, JavaScript, Dart</p>
+          </div>
+          <div class="skill-card">
+            <h3>ML Systems</h3>
+            <p>Docker, Podman, Cloud GPUs, Git, CI/CD, REST APIs</p>
+          </div>
+          <div class="skill-card">
+            <h3>Research Areas</h3>
+            <p>Recommender systems, ranking, explainability, controllability, NLP, sequential recommendation</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="experience">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">Background</span>
+          <h2>Experience</h2>
+        </div>
+        <div class="section-body">
+          <div class="timeline-item">
+            <h3 class="timeline-title">Graduate Research Assistant · University of Colorado Boulder</h3>
+            <div class="timeline-meta">2023–Present · Boulder, Colorado</div>
+            <p>Research in interpretable, controllable, and multi-stakeholder recommender systems. Advisor: Prof. Robin Burke.</p>
+          </div>
+
+          <div class="timeline-item">
+            <h3 class="timeline-title">Graduate Research Assistant · University of Tehran</h3>
+            <div class="timeline-meta">2023</div>
+            <p>Developed recommendation methods combining textual reviews with behavioral signals and investigated Transformer-based sequential recommendation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="education">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">Academic</span>
+          <h2>Education</h2>
+        </div>
+        <div class="section-body">
+          <div class="timeline-item">
+            <h3 class="timeline-title">PhD in Computer Science · University of Colorado Boulder</h3>
+            <div class="timeline-meta">Aug 2023 – Expected May 2028</div>
+            <p>Focus: interpretability and controllability in multi-stakeholder recommender systems. Advisor: Prof. Robin Burke.</p>
+          </div>
+
+          <div class="timeline-item">
+            <h3 class="timeline-title">MSc in Electrical and Computer Engineering · University of Tehran</h3>
+            <div class="timeline-meta">2018–2021</div>
+            <p>Thesis: An improved hybrid recommender system integrating document context-based and behavior-based methods.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="content-section" id="cv">
       <div class="section-heading">
-        <h2>CV</h2>
+        <div>
+          <span class="section-kicker">Resume</span>
+          <h2>CV</h2>
+        </div>
         <div class="section-body">
           <div class="light-card">
-            <p>For a complete overview of my research, publications, teaching, and academic experience, see my current curriculum vitae.</p>
-            <a class="solid-button" href="cv.pdf" target="_blank" rel="noopener noreferrer">Open CV</a>
+            <p>
+              For a concise overview of my research, publications, technical skills, and academic background, see my current CV.
+            </p>
+            <a class="solid-button" href="Meysam_Varasteh_2026_pdf.pdf" target="_blank" rel="noopener noreferrer">Open CV</a>
           </div>
         </div>
       </div>
@@ -580,14 +855,16 @@
 
     <section class="content-section" id="contact">
       <div class="section-heading">
-        <h2>Contact</h2>
+        <div>
+          <span class="section-kicker">Connect</span>
+          <h2>Contact</h2>
+        </div>
         <div class="section-body">
           <p>
-            I am interested in research collaborations and opportunities related to recommender systems, interpretability, explainable AI, and responsible recommendation.
+            I am interested in Summer 2027 research and applied machine learning internships involving recommender systems, personalization, ranking, interpretability, controllability, and responsible machine learning.
           </p>
           <div class="contact-links">
-            <!-- Replace the email below with your preferred public email address -->
-            <a href="mailto:YOUR_EMAIL@colorado.edu">Email</a>
+            <a href="mailto:meysam.varasteh@colorado.edu">Email</a>
             <a href="https://github.com/meysamvarasteh92" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://scholar.google.com/citations?user=hedCdogAAAAJ&hl=en&oi=sra" target="_blank" rel="noopener noreferrer">Google Scholar</a>
             <a href="https://www.linkedin.com/in/meysam-varasteh/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
