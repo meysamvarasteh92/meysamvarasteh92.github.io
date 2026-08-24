@@ -87,22 +87,44 @@
       min-height: 535px;
       overflow: hidden;
       border-radius: 26px;
-      background-image:
-        linear-gradient(90deg, rgba(8, 20, 32, 0.90) 0%, rgba(8, 20, 32, 0.76) 50%, rgba(8, 20, 32, 0.42) 100%),
-        url("background.JPG");
-      background-size: cover;
-      background-position: center 42%;
-      box-shadow: var(--shadow);
+      background: #0b1722;
+      box-shadow:
+        var(--shadow),
+        inset 0 -4px 0 var(--gold);
       display: flex;
       align-items: center;
+      isolation: isolate;
     }
 
+    /* Aspen photograph: intentionally softened so it adds personality
+       without competing with the research content. */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -3px;
+      z-index: 0;
+      background-image: url("background.JPG");
+      background-size: cover;
+      background-position: center 42%;
+      filter: saturate(0.68) contrast(0.94) brightness(0.82) blur(0.7px);
+      transform: scale(1.01);
+    }
+
+    /* Dark, nearly uniform overlay keeps text readable and turns the
+       landscape into a subtle visual texture rather than the focal point. */
     .hero::after {
       content: "";
       position: absolute;
-      inset: auto 0 0 0;
-      height: 5px;
-      background: var(--gold);
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(90deg,
+          rgba(7, 17, 27, 0.91) 0%,
+          rgba(7, 17, 27, 0.86) 48%,
+          rgba(7, 17, 27, 0.76) 100%),
+        linear-gradient(180deg,
+          rgba(7, 17, 27, 0.08) 0%,
+          rgba(7, 17, 27, 0.20) 100%);
     }
 
     .hero-content {
@@ -116,7 +138,10 @@
       align-items: center;
     }
 
-    .hero-copy { max-width: 720px; }
+    .hero-copy {
+      max-width: 720px;
+      text-shadow: 0 2px 18px rgba(0,0,0,0.16);
+    }
 
     .availability {
       display: inline-flex;
@@ -206,7 +231,7 @@
       border-radius: 9px;
       border: 1px solid rgba(255,255,255,0.42);
       color: #fff;
-      background: rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.055);
       font-size: 0.91rem;
       font-weight: 720;
       transition: transform .16s ease, background .16s ease, border-color .16s ease;
@@ -229,12 +254,13 @@
 
     .photo-frame {
       justify-self: end;
-      width: 245px;
-      height: 245px;
-      padding: 8px;
+      width: 232px;
+      height: 232px;
+      padding: 6px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.96);
-      box-shadow: 0 18px 46px rgba(0,0,0,0.30);
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(255,255,255,0.30);
+      box-shadow: 0 16px 42px rgba(0,0,0,0.26);
     }
 
     .hero-photo,
@@ -553,8 +579,8 @@
       .photo-frame {
         order: -1;
         justify-self: start;
-        width: 190px;
-        height: 190px;
+        width: 184px;
+        height: 184px;
       }
 
       .section-heading { grid-template-columns: 1fr; gap: 22px; }
@@ -570,7 +596,7 @@
       .hero-wrap { padding-top: 16px; }
       .hero { min-height: 0; border-radius: 18px; background-position: center; }
       .hero-content { padding: 30px 22px 36px; }
-      .photo-frame { width: 155px; height: 155px; }
+      .photo-frame { width: 150px; height: 150px; }
       section.content-section { padding: 48px 0; }
       .research-card { padding: 24px 22px; }
       .research-topline { flex-direction: column; gap: 8px; }
@@ -593,6 +619,7 @@
   </nav>
 
   <div class="site-shell hero-wrap" id="top">
+    <!-- background.JPG is the Aspen hero image. The CSS intentionally darkens and softens it. -->
     <header class="hero">
       <div class="hero-content">
         <div class="hero-copy">
