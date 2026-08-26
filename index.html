@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Meysam Varasteh — PhD researcher in recommender systems at the University of Colorado Boulder, working on interpretability, controllability, and multi-stakeholder recommendation.">
-  <meta name="keywords" content="Meysam Varasteh, recommender systems, machine learning, interpretability, controllability, personalization, ranking, explainable AI, University of Colorado Boulder">
+  <meta name="description" content="Meysam Varasteh — PhD researcher in recommender systems at the University of Colorado Boulder, working on interpretable and controllable recommendation, concept bottleneck models, and multi-stakeholder systems.">
+  <meta name="keywords" content="Meysam Varasteh, recommender systems, machine learning, interpretability, controllability, concept bottleneck models, sequential recommendation, personalization, ranking, explainable AI, University of Colorado Boulder">
   <meta name="author" content="Meysam Varasteh">
   <title>Meysam Varasteh | Recommender Systems Researcher</title>
 
@@ -612,6 +612,7 @@
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
+        <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#cv">CV</a>
       </div>
@@ -619,19 +620,28 @@
   </nav>
 
   <div class="site-shell hero-wrap" id="top">
-    <!-- background.JPG is the Aspen hero image. The CSS intentionally darkens and softens it. -->
+    <!-- Keep background.JPG in the same GitHub Pages folder as this file. -->
     <header class="hero">
       <div class="hero-content">
         <div class="hero-copy">
-          <div class="availability"><span class="availability-dot"></span>Seeking Summer 2027 Research / Applied ML Internships</div>
+          <div class="availability">
+            <span class="availability-dot"></span>
+            Seeking Summer 2027 Research / Applied ML Internships
+          </div>
+
           <p class="eyebrow">Recommender Systems · Machine Learning</p>
           <h1>Meysam Varasteh</h1>
           <p class="hero-title">PhD Researcher in Recommender Systems</p>
           <p class="hero-role">Computer Science · University of Colorado Boulder</p>
+
           <p class="hero-research">
-            I develop interpretable and controllable recommender systems, with a focus on understanding and steering how recommendation models make decisions for different stakeholders.
+            I develop interpretable and controllable recommender systems, with a focus on
+            understanding and steering recommendation behavior for different stakeholders.
           </p>
-          <p class="hero-keywords">Interpretability · Controllability · Multi-Stakeholder Recommendation · Personalization</p>
+
+          <p class="hero-keywords">
+            Interpretability · Controllability · Concept Bottleneck Models · Multi-Stakeholder Recommendation
+          </p>
 
           <div class="hero-actions">
             <a class="button primary" href="Meysam_Varasteh_2026_pdf.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
@@ -655,97 +665,146 @@
   </div>
 
   <main class="site-shell">
+
+    <!-- =========================================================
+         ABOUT
+         ========================================================= -->
     <section class="content-section" id="about">
       <div class="section-heading">
         <div>
           <span class="section-kicker">Profile</span>
           <h2>About</h2>
         </div>
+
         <div class="section-body">
           <p>
-            I am a PhD student in Computer Science at the University of Colorado Boulder, advised by Professor
+            I am a PhD student in Computer Science at the University of Colorado Boulder,
+            advised by Professor
             <a href="https://scholar.google.com/citations?user=wRwI6d0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Robin Burke</a>.
-            My research focuses on <strong>interpretable and controllable recommender systems</strong>, particularly in multi-stakeholder environments.
+            My research focuses on <strong>interpretable and controllable recommender systems</strong>,
+            particularly in multi-stakeholder environments.
           </p>
+
           <p>
-            I am interested in understanding why recommender systems make particular decisions, explaining those decisions to different stakeholders, and developing mechanisms that allow recommendation behavior to be meaningfully controlled. My current work spans provider-side transparency, counterfactual and comparative explanations, and controllable recommendation models.
+            I study why recommender systems make particular decisions, how those decisions can
+            be explained to different stakeholders, and how recommendation behavior can be
+            meaningfully controlled. My current work spans concept bottleneck models for
+            controllable recommendation, provider-side transparency, and counterfactual and
+            comparative explanations.
           </p>
 
           <div class="interest-list" aria-label="Research interests">
             <span class="tag">Recommender Systems</span>
             <span class="tag">Interpretability</span>
             <span class="tag">Controllability</span>
+            <span class="tag">Concept Bottleneck Models</span>
             <span class="tag">Multi-Stakeholder Recommendation</span>
-            <span class="tag">Personalization & Ranking</span>
+            <span class="tag">Personalization &amp; Ranking</span>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- =========================================================
+         SELECTED RESEARCH
+         ========================================================= -->
     <section class="content-section" id="research">
       <div class="section-heading">
         <div>
           <span class="section-kicker">Selected work</span>
           <h2>Research</h2>
         </div>
+
         <div class="section-body research-grid">
+
+          <!-- 01. Concept Bottleneck Models -->
           <article class="research-card">
             <div class="research-topline">
-              <div class="number">01 · PROVIDER TRANSPARENCY</div>
+              <div class="number">01 · CONTROLLABLE RECOMMENDATION</div>
+              <span class="venue-badge">Target: WWW 2027</span>
+            </div>
+
+            <h3>Concept Bottleneck Models for Controllable Recommendation</h3>
+            <p class="research-subtitle">Interpretable and Steerable Sequential Recommender Systems</p>
+
+            <p>
+              Developing a concept bottleneck architecture for sequential recommendation that
+              maps learned user representations through human-interpretable concepts before
+              generating recommendations. The framework supports targeted concept interventions
+              for steering recommendation behavior and evaluating their effects on ranking and
+              item exposure.
+            </p>
+
+            <div class="research-meta">
+              Concept Bottleneck Models · Concept Interventions · Controllability · Interpretability · Sequential Recommendation
+            </div>
+          </article>
+
+          <!-- 02. Provider Transparency -->
+          <article class="research-card">
+            <div class="research-topline">
+              <div class="number">02 · PROVIDER TRANSPARENCY</div>
               <span class="venue-badge">IntRS @ RecSys 2026</span>
             </div>
+
             <h3>Why Didn't More People See It?</h3>
             <p class="research-subtitle">Recommendation Transparency for Providers</p>
+
             <p>
-              Developed a surrogate-modeling framework that approximates recommender-system exposure behavior and quantifies feature contributions to explain why content receives more or less exposure across the user population.
+              Developed a counterfactual explanation framework for provider-side recommendation
+              exposure by identifying influential interactions in users' historical profiles.
+              Evaluated the approach across 2 recommender models and 3 datasets to generate
+              model-grounded explanations of ranking and exposure decisions.
             </p>
-            <div class="research-meta">Surrogate Models · Exposure · Interpretability · Multi-Stakeholder Recommendation</div>
+
+            <div class="research-meta">
+              Counterfactual Explanations · Exposure · Interpretability · Multi-Stakeholder Recommendation
+            </div>
+
             <div class="inline-links">
               <a href="#pub-provider">Publication details</a>
             </div>
           </article>
 
+          <!-- 03. Pairwise Counterfactual Explanations -->
           <article class="research-card">
             <div class="research-topline">
-              <div class="number">02 · COUNTERFACTUAL EXPLANATIONS</div>
+              <div class="number">03 · COUNTERFACTUAL EXPLANATIONS</div>
               <span class="venue-badge">IntRS @ RecSys 2026</span>
             </div>
+
             <h3>Why This, Not That?</h3>
             <p class="research-subtitle">Pairwise Counterfactual Explanations for Recommender Systems</p>
+
             <p>
-              Developed methods to explain why one item is ranked above another by identifying interactions in a user's historical profile that contribute to the relative ranking of item pairs.
+              Developed methods to explain why one item is ranked above another by identifying
+              interactions in a user's historical profile that contribute to the relative ranking
+              of item pairs, providing model-grounded explanations of recommendation decisions.
             </p>
-            <div class="research-meta">Counterfactuals · Ranking · Sequential Behavior · Explainability</div>
+
+            <div class="research-meta">
+              Counterfactuals · Ranking · Sequential Behavior · Explainability
+            </div>
+
             <div class="inline-links">
               <a href="#pub-counterfactual">Publication details</a>
             </div>
           </article>
 
-          <article class="research-card">
-            <div class="research-topline">
-              <div class="number">03 · COMPARATIVE EXPLANATIONS</div>
-              <span class="venue-badge">IntRS @ RecSys 2024</span>
-            </div>
-            <h3>Comparative Explanations for Recommendation</h3>
-            <p class="research-subtitle">Research Directions</p>
-            <p>
-              Developed a taxonomy of comparative explanation approaches and studied how comparison-based explanations can improve recommendation transparency across stakeholders, with particular emphasis on item and content providers.
-            </p>
-            <div class="research-meta">Explainable AI · Comparative Explanations · Provider Perspective</div>
-            <div class="inline-links">
-              <a href="https://ceur-ws.org/Vol-3815/paper1.pdf" target="_blank" rel="noopener noreferrer">Paper</a>
-            </div>
-          </article>
         </div>
       </div>
     </section>
 
+    <!-- =========================================================
+         PUBLICATIONS
+         ========================================================= -->
     <section class="content-section" id="publications">
       <div class="section-heading">
         <div>
           <span class="section-kicker">Selected papers</span>
           <h2>Publications</h2>
         </div>
+
         <div class="section-body">
           <div class="year-label">2026</div>
 
@@ -792,87 +851,120 @@
       </div>
     </section>
 
+    <!-- =========================================================
+         SKILLS
+         ========================================================= -->
     <section class="content-section" id="skills">
       <div class="section-heading">
         <div>
           <span class="section-kicker">Technical</span>
           <h2>Skills</h2>
         </div>
+
         <div class="section-body skills-grid">
           <div class="skill-card">
             <h3>Machine Learning</h3>
-            <p>PyTorch (CUDA), Hugging Face, TensorFlow, scikit-learn, Transformers, activation steering</p>
+            <p>PyTorch (CUDA), Transformers, Hugging Face, TensorFlow, scikit-learn</p>
           </div>
+
           <div class="skill-card">
             <h3>Programming</h3>
             <p>Python, C++, JavaScript, Dart</p>
           </div>
+
           <div class="skill-card">
             <h3>ML Systems</h3>
             <p>Docker, Podman, Cloud GPUs, Git, CI/CD, REST APIs</p>
           </div>
+
           <div class="skill-card">
             <h3>Research Areas</h3>
-            <p>Recommender systems, ranking, explainability, controllability, NLP, sequential recommendation</p>
+            <p>Recommender systems, ranking, concept bottleneck models, interpretability, controllability, sequential recommendation, NLP</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- =========================================================
+         EXPERIENCE
+         ========================================================= -->
     <section class="content-section" id="experience">
       <div class="section-heading">
         <div>
           <span class="section-kicker">Background</span>
           <h2>Experience</h2>
         </div>
+
         <div class="section-body">
           <div class="timeline-item">
             <h3 class="timeline-title">Graduate Research Assistant · University of Colorado Boulder</h3>
             <div class="timeline-meta">2023–Present · Boulder, Colorado</div>
-            <p>Research in interpretable, controllable, and multi-stakeholder recommender systems. Advisor: Prof. Robin Burke.</p>
+            <p>
+              Developing interpretable and controllable recommender systems, including concept-based
+              steering, provider-side transparency, and counterfactual explanations for
+              multi-stakeholder recommendation. Advisor: Prof. Robin Burke.
+            </p>
           </div>
 
           <div class="timeline-item">
             <h3 class="timeline-title">Graduate Research Assistant · University of Tehran</h3>
             <div class="timeline-meta">2023</div>
-            <p>Developed recommendation methods combining textual reviews with behavioral signals and investigated Transformer-based sequential recommendation.</p>
+            <p>
+              Developed recommendation methods combining textual reviews with behavioral signals
+              and investigated Transformer-based sequential recommendation.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- =========================================================
+         EDUCATION
+         ========================================================= -->
     <section class="content-section" id="education">
       <div class="section-heading">
         <div>
           <span class="section-kicker">Academic</span>
           <h2>Education</h2>
         </div>
+
         <div class="section-body">
           <div class="timeline-item">
             <h3 class="timeline-title">PhD in Computer Science · University of Colorado Boulder</h3>
             <div class="timeline-meta">Aug 2023 – Expected May 2028</div>
-            <p>Focus: interpretability and controllability in multi-stakeholder recommender systems. Advisor: Prof. Robin Burke.</p>
+            <p>
+              Focus: interpretability and controllability in multi-stakeholder recommender systems.
+              Advisor: Prof. Robin Burke.
+            </p>
           </div>
 
           <div class="timeline-item">
             <h3 class="timeline-title">MSc in Electrical and Computer Engineering · University of Tehran</h3>
             <div class="timeline-meta">2018–2021</div>
-            <p>Thesis: An improved hybrid recommender system integrating document context-based and behavior-based methods.</p>
+            <p>
+              Thesis: An improved hybrid recommender system integrating document context-based
+              and behavior-based methods.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- =========================================================
+         CV
+         ========================================================= -->
     <section class="content-section" id="cv">
       <div class="section-heading">
         <div>
           <span class="section-kicker">Resume</span>
           <h2>CV</h2>
         </div>
+
         <div class="section-body">
           <div class="light-card">
             <p>
-              For a concise overview of my research, publications, technical skills, and academic background, see my current CV.
+              For a concise overview of my research, publications, technical skills, and academic
+              background, see my current CV.
             </p>
             <a class="solid-button" href="Meysam_Varasteh_2026_pdf.pdf" target="_blank" rel="noopener noreferrer">Open CV</a>
           </div>
@@ -880,16 +972,23 @@
       </div>
     </section>
 
+    <!-- =========================================================
+         CONTACT
+         ========================================================= -->
     <section class="content-section" id="contact">
       <div class="section-heading">
         <div>
           <span class="section-kicker">Connect</span>
           <h2>Contact</h2>
         </div>
+
         <div class="section-body">
           <p>
-            I am interested in Summer 2027 research and applied machine learning internships involving recommender systems, personalization, ranking, interpretability, controllability, and responsible machine learning.
+            I am interested in Summer 2027 research and applied machine learning internships involving
+            recommender systems, personalization, ranking, interpretability, controllability, and
+            responsible machine learning.
           </p>
+
           <div class="contact-links">
             <a href="mailto:meysam.varasteh@colorado.edu">Email</a>
             <a href="https://github.com/meysamvarasteh92" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -899,6 +998,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer>
