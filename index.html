@@ -399,6 +399,45 @@
     }
 
     /* -----------------------------
+       Honors & Awards
+    ----------------------------- */
+    .award-item {
+      display: grid;
+      grid-template-columns: 145px 1fr;
+      gap: 18px;
+      padding: 0 0 24px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid #ededed;
+    }
+
+    .award-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .award-date {
+      color: #777;
+      font-size: 0.88rem;
+      line-height: 1.45;
+    }
+
+    .award-content h3 {
+      margin: 0;
+      color: #252525;
+      font-size: 1.05rem;
+      line-height: 1.42;
+      font-weight: 700;
+    }
+
+    .award-meta {
+      margin: 3px 0 0;
+      color: #666;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    /* -----------------------------
        Skills
     ----------------------------- */
     .skills {
@@ -484,6 +523,7 @@
       .availability { margin-top: 16px; }
       .content { max-width: none; }
       .timeline { grid-template-columns: 1fr; gap: 4px; }
+      .award-item { grid-template-columns: 1fr; gap: 4px; }
     }
 
     @media (max-width: 500px) {
@@ -522,6 +562,7 @@
         <a href="#publications">Publications</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
+        <a href="#awards">Honors & Awards</a>
         <a href="Meysam_Varasteh_2026_pdf.pdf" target="_blank" rel="noopener noreferrer">CV</a>
       </nav>
     </div>
@@ -739,6 +780,26 @@
             <h3>MSc in Electrical and Computer Engineering</h3>
             <div class="timeline-meta">University of Tehran</div>
             <p>Thesis on hybrid recommender systems integrating document context-based and behavior-based recommendation methods.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="awards">
+        <h2 class="section-title">Honors & Awards</h2>
+
+        <div class="award-item">
+          <div class="award-date">2025 – 2026</div>
+          <div class="award-content">
+            <h3>Outstanding Teaching Assistant Award</h3>
+            <div class="award-meta">Department of Computer Science · University of Colorado Boulder</div>
+          </div>
+        </div>
+
+        <div class="award-item">
+          <div class="award-date">2024 – 2025</div>
+          <div class="award-content">
+            <h3>Summer Research Fellowship</h3>
+            <div class="award-meta">Department of Computer Science · University of Colorado Boulder</div>
           </div>
         </div>
       </section>
