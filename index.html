@@ -21,7 +21,6 @@
       --link: #2f6f9f;
       --link-hover: #174b72;
       --paper: #fff;
-      --soft: #f7f7f7;
       --max-width: 1180px;
       --sidebar: 270px;
     }
@@ -96,7 +95,7 @@
     .nav-links a:hover { color: #111; text-decoration: none; }
 
     /* -----------------------------
-       Main academic layout
+       Main layout
     ----------------------------- */
     .page {
       width: min(var(--max-width), calc(100% - 40px));
@@ -132,8 +131,7 @@
       justify-content: center;
       background: #eee;
       color: #777;
-      text-align: center;
-      font-size: 0.85rem;
+      font-size: 2rem;
       margin-bottom: 22px;
     }
 
@@ -151,23 +149,6 @@
       font-size: 0.95rem;
       line-height: 1.45;
     }
-
-    .sidebar-bio {
-      margin: 0 0 18px;
-      color: #444;
-      font-size: 0.92rem;
-      line-height: 1.58;
-    }
-
-    .sidebar-meta {
-      margin: 0 0 20px;
-      padding: 0;
-      list-style: none;
-      color: #555;
-      font-size: 0.9rem;
-    }
-
-    .sidebar-meta li { margin: 6px 0; }
 
     .sidebar-links {
       display: flex;
@@ -196,6 +177,7 @@
     .intro {
       padding-bottom: 34px;
       border-bottom: 1px solid var(--line);
+      scroll-margin-top: 85px;
     }
 
     .intro h2 {
@@ -214,13 +196,7 @@
       color: #3e3e3e;
     }
 
-    .quick-links {
-      margin-top: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 18px;
-      font-size: 0.92rem;
-    }
+    .intro p:last-child { margin-bottom: 0; }
 
     section {
       padding: 38px 0;
@@ -239,12 +215,6 @@
       line-height: 1.25;
     }
 
-    .section-lead {
-      margin: -8px 0 24px;
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
     /* -----------------------------
        News
     ----------------------------- */
@@ -252,7 +222,6 @@
       display: grid;
       grid-template-columns: 78px 1fr;
       gap: 10px 18px;
-      margin: 0;
     }
 
     .news-date {
@@ -268,7 +237,7 @@
     }
 
     /* -----------------------------
-       Research / project entries
+       Research entries
     ----------------------------- */
     .research-item {
       padding: 0 0 28px;
@@ -309,10 +278,11 @@
     }
 
     .research-item p {
-      margin: 0;
       color: #444;
       font-size: 0.95rem;
     }
+
+    .research-item p:last-of-type { margin: 0; }
 
     .research-links,
     .publication-links {
@@ -341,6 +311,7 @@
       padding: 0 0 22px;
       margin: 0 0 22px;
       border-bottom: 1px solid #ededed;
+      scroll-margin-top: 85px;
     }
 
     .publication:last-child {
@@ -399,56 +370,28 @@
     }
 
     /* -----------------------------
-       Honors & Awards
+       Compact lists: service, awards, skills
     ----------------------------- */
-    .award-item {
+    .compact-list {
       display: grid;
       grid-template-columns: 145px 1fr;
-      gap: 18px;
-      padding: 0 0 24px;
-      margin-bottom: 24px;
-      border-bottom: 1px solid #ededed;
-    }
-
-    .award-item:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      border-bottom: 0;
-    }
-
-    .award-date {
-      color: #777;
-      font-size: 0.88rem;
-      line-height: 1.45;
-    }
-
-    .award-content h3 {
-      margin: 0;
-      color: #252525;
-      font-size: 1.05rem;
-      line-height: 1.42;
-      font-weight: 700;
-    }
-
-    .award-meta {
-      margin: 3px 0 0;
-      color: #666;
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-
-    /* -----------------------------
-       Skills
-    ----------------------------- */
-    .skills {
-      display: grid;
-      grid-template-columns: 150px 1fr;
       gap: 10px 18px;
       font-size: 0.94rem;
     }
 
-    .skills strong { color: #333; }
-    .skills div:nth-child(even) { color: #4b4b4b; }
+    .compact-label {
+      color: #777;
+      font-size: 0.88rem;
+    }
+
+    .compact-text { color: #444; }
+    .compact-text strong { color: #333; }
+
+    .skills .compact-label {
+      color: #333;
+      font-size: 0.94rem;
+      font-weight: 700;
+    }
 
     /* -----------------------------
        Footer
@@ -498,14 +441,14 @@
       }
 
       .page {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         padding-top: 30px;
       }
 
       .sidebar {
         position: static;
         display: grid;
-        grid-template-columns: 126px 1fr;
+        grid-template-columns: 126px minmax(0, 1fr);
         gap: 22px;
         align-items: start;
         padding-bottom: 30px;
@@ -523,7 +466,8 @@
       .availability { margin-top: 16px; }
       .content { max-width: none; }
       .timeline { grid-template-columns: 1fr; gap: 4px; }
-      .award-item { grid-template-columns: 1fr; gap: 4px; }
+      .compact-list { grid-template-columns: 1fr; gap: 2px; }
+      .compact-text { margin-bottom: 10px; }
     }
 
     @media (max-width: 500px) {
@@ -534,7 +478,7 @@
       }
 
       .sidebar {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 18px;
       }
 
@@ -547,8 +491,6 @@
       .intro h2 { font-size: 2rem; }
       .news-list { grid-template-columns: 1fr; gap: 2px; }
       .news-text { margin-bottom: 11px; }
-      .skills { grid-template-columns: 1fr; gap: 2px; }
-      .skills div:nth-child(even) { margin-bottom: 10px; }
     }
   </style>
 </head>
@@ -557,12 +499,11 @@
     <div class="masthead-inner">
       <a class="site-title" href="#home">Meysam Varasteh</a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
-        <a href="#awards">Honors & Awards</a>
+        <a href="#awards">Awards</a>
       </nav>
     </div>
   </header>
@@ -575,7 +516,7 @@
           src="profile.jpg"
           alt="Meysam Varasteh"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="profile-placeholder">profile.jpg</div>
+        <div class="profile-placeholder" aria-hidden="true">MV</div>
       </div>
 
       <div class="sidebar-copy">
@@ -585,16 +526,18 @@
           University of Colorado Boulder
         </p>
 
-
         <div class="sidebar-links">
           <a href="mailto:meysam.varasteh@colorado.edu">Email</a>
-          <a href="https://scholar.google.com/citations?user=hedCdogAAAAJ&hl=en&oi=sra" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a href="https://scholar.google.com/citations?user=hedCdogAAAAJ&amp;hl=en&amp;oi=sra" target="_blank" rel="noopener noreferrer">Google Scholar</a>
           <a href="https://github.com/meysamvarasteh92" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://www.linkedin.com/in/meysam-varasteh/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="Meysam_Varasteh_Resume_2026.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF)</a>
           <a href="Meysam_Varasteh_CV_2026.pdf" target="_blank" rel="noopener noreferrer">Academic CV (PDF)</a>
         </div>
 
+        <div class="availability">
+          <strong>Seeking research internships</strong> for Summer 2027.
+        </div>
       </div>
     </aside>
 
@@ -603,16 +546,12 @@
         <h2>About Me</h2>
         <p>
           I am a PhD student in Computer Science at the University of Colorado Boulder, advised by
-          <a href="https://scholar.google.com/citations?user=wRwI6d0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Prof. Robin Burke</a>.
-         My research lies at the intersection of recommender systems and interpretable machine learning, with a focus on understanding, explaining, and controlling how recommendation models make decisions.
+          <a href="https://scholar.google.com/citations?user=wRwI6d0AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Prof. Robin Burke</a>.
+          My research lies at the intersection of recommender systems and interpretable machine learning, with a focus on understanding, explaining, and controlling how recommendation models make decisions.
         </p>
         <p>
-        My current work focuses on making trained recommendation models interpretable and controllable, particularly through post-training concept-based representations and steering mechanisms that enable meaningful interventions while preserving recommendation quality. I also work on provider-side transparency, counterfactual and comparative explanations. More broadly, I am interested in making modern recommender systems more transparent and steerable to different stakeholders.
+          My current work makes trained recommendation models interpretable and controllable through post-hoc concept-based representations and steering mechanisms that enable meaningful interventions while preserving recommendation quality. I also work on provider-side transparency and on counterfactual and comparative explanations.
         </p>
-        <div class="quick-links">
-          <a href="#research">Selected research</a>
-          <a href="#publications">Publications</a>
-        </div>
       </div>
 
       <section id="news">
@@ -621,14 +560,25 @@
           <div class="news-date">2026</div>
           <div class="news-text">Two papers on provider transparency and pairwise counterfactual explanations accepted to IntRS @ ACM RecSys 2026.</div>
 
+          <div class="news-date">2026</div>
+          <div class="news-text">Received the Outstanding Teaching Assistant Award from the CU Boulder CS Department.</div>
+
+          <div class="news-date">2026</div>
+          <div class="news-text">Serving as a reviewer for ACM Transactions on Recommender Systems (TORS).</div>
         </div>
       </section>
 
       <section id="research">
         <h2 class="section-title">Selected Research</h2>
-        <p class="section-lead">Current and recent projects in recommender systems, interpretability, and controllable machine learning.</p>
 
-    
+        <article class="research-item">
+          <div class="item-eyebrow">Current focus</div>
+          <h3>Concept-Based Steering for Recommender Systems</h3>
+          <p class="research-subtitle">Interpretability · Controllability · Concept Bottleneck Models</p>
+          <p>
+            Building post-hoc concept representations that make pretrained recommenders interpretable and directly steerable, while preserving their ranking behavior.
+          </p>
+        </article>
 
         <article class="research-item">
           <div class="item-eyebrow">IntRS @ ACM RecSys 2026</div>
@@ -638,7 +588,7 @@
             Developed an interpretable surrogate framework for provider-side transparency that explains system-wide item exposure using structural recommendation features, achieving <strong>R² = 0.83–0.93</strong> across three recommender models and two datasets and revealing model- and domain-specific exposure drivers.
           </p>
           <div class="research-links">
-            <a href="#pub-provider">Publication details</a>
+            <a href="https://ceur-ws.org/Vol-4261/short4.pdf" target="_blank" rel="noopener noreferrer">Paper</a>
           </div>
         </article>
 
@@ -647,29 +597,11 @@
           <h3>Why This, Not That? Mining User Profiles for Pair-wise Counterfactuals</h3>
           <p class="research-subtitle">Counterfactual Explanations · Ranking · Comparative Explanations</p>
           <p>
-            Developed a comparative counterfactual explanation framework answering “Why was item A ranked above item B?” by identifying influential interactions in user histories whose removal reverses the ranking. Evaluated across three datasets and two recommender models, outperforming established explanation baselines in most settings.
+            Developed a comparative counterfactual explanation framework answering “Why was item A ranked above item B?” by identifying influential interactions in user histories whose removal reverses the ranking. Evaluated across three datasets and two recommender models.
           </p>
           <div class="research-links">
-            <a href="#pub-counterfactual">Publication details</a>
+            <a href="https://ceur-ws.org/Vol-4261/paper1.pdf" target="_blank" rel="noopener noreferrer">Paper</a>
           </div>
-        </article>
-
-        <article class="research-item">
-          <div class="item-eyebrow">Fairness & Explainable AI</div>
-          <h3>Fairness Auditing Through the Lens of Counterfactual Explanations</h3>
-          <p class="research-subtitle">Counterfactual Fairness · Qualification · Effort</p>
-          <p>
-            Developed a counterfactual-based fairness auditing framework to assess whether sensitive groups require unequal effort to achieve favorable model outcomes. Introduced qualification- and effort-based measures and evaluated fairness across multiple classifiers on the Adult Income and Census Income datasets using KL divergence.
-          </p>
-        </article>
-
-        <article class="research-item">
-          <div class="item-eyebrow">ICEE 2023</div>
-          <h3>Review-Aware Hybrid Recommendation</h3>
-          <p class="research-subtitle">NLP · Hybrid Recommendation · Attention</p>
-          <p>
-            Developed a hybrid recommender system integrating behavioral signals with CNN-based textual representations and attention mechanisms, achieving up to <strong>22.8% improvement</strong> over strong baselines across three datasets.
-          </p>
         </article>
       </section>
 
@@ -677,23 +609,29 @@
         <h2 class="section-title">Publications</h2>
 
         <div class="year">2026</div>
-        <article class="publication" id="pub-provider">
-          <h3>Counterfactual Profile Perturbations for Recommendation Explanations: A Reproducibility Study</h3>
-          <div class="authors">
-                <strong>Meysam Varasteh</strong>, Elizabeth McKinnie, Robin Burke
-          </div>
-          <div class="venue">ArXiv preprint</div>
-        </article>
-        <article class="publication" id="pub-counterfactual">
-          <h3>Why This, Not That? Mining User Profiles for Pair-wise Counterfactuals</h3>
-          <div class="authors"><strong>Meysam Varasteh</strong>, Veronika Bogina, Noam Koenigstein, Robin Burke</div>
+
+        <article class="publication">
+          <h3>Why Didn't More People See It? Recommendation Transparency for Providers</h3>
+          <div class="authors"><strong>Meysam Varasteh</strong>, Robin Burke</div>
           <div class="venue">IntRS Workshop @ ACM RecSys 2026</div>
+          <div class="publication-links">
+            <a href="https://ceur-ws.org/Vol-4261/short4.pdf" target="_blank" rel="noopener noreferrer">Paper</a>
+          </div>
         </article>
 
-        <article class="publication" id="pub-counterfactual">
+        <article class="publication">
           <h3>Why This, Not That? Mining User Profiles for Pair-wise Counterfactuals</h3>
           <div class="authors"><strong>Meysam Varasteh</strong>, Veronika Bogina, Noam Koenigstein, Robin Burke</div>
           <div class="venue">IntRS Workshop @ ACM RecSys 2026</div>
+          <div class="publication-links">
+            <a href="https://ceur-ws.org/Vol-4261/paper1.pdf" target="_blank" rel="noopener noreferrer">Paper</a>
+          </div>
+        </article>
+
+        <article class="publication">
+          <h3>Counterfactual Profile Perturbations for Recommendation Explanations: A Reproducibility Study</h3>
+          <div class="authors"><strong>Meysam Varasteh</strong>, Elizabeth McKinnie, Robin Burke</div>
+          <div class="venue">arXiv preprint</div>
         </article>
 
         <div class="year">2024</div>
@@ -721,7 +659,6 @@
         <article class="publication">
           <h3>Fairness Auditing Through the Lens of Counterfactual Explanations</h3>
           <div class="authors">Yashar Deldjoo, <strong>Meysam Varasteh</strong>, Yara M. Bahram, Marco Antonio Insabato, Tommaso Di Noia</div>
-          <div class="venue">Research work on counterfactual fairness auditing</div>
         </article>
 
         <div class="year">2022</div>
@@ -730,6 +667,9 @@
           <h3>Designing a Sequential Recommendation System for Heterogeneous Interactions Using Transformers</h3>
           <div class="authors">Mehdi Soleiman Nejad, <strong>Meysam Varasteh</strong>, Hadi Moradi, Mohammad Amin Sadeghi</div>
           <div class="venue">arXiv preprint</div>
+          <div class="publication-links">
+            <a href="https://arxiv.org/abs/2205.00265" target="_blank" rel="noopener noreferrer">Paper</a>
+          </div>
         </article>
       </section>
 
@@ -759,15 +699,26 @@
         </div>
       </section>
 
+      <section id="service">
+        <h2 class="section-title">Teaching &amp; Service</h2>
+        <div class="compact-list">
+          <div class="compact-label">Teaching</div>
+          <div class="compact-text">Teaching Assistant, Computer Science, University of Colorado Boulder</div>
+
+          <div class="compact-label">Reviewing</div>
+          <div class="compact-text">ACM Transactions on Recommender Systems (TORS)</div>
+        </div>
+      </section>
+
       <section id="education">
         <h2 class="section-title">Education</h2>
 
         <div class="timeline">
-          <div class="timeline-date">2023 – 2028</div>
+          <div class="timeline-date">2023 – Expected 2028</div>
           <div>
             <h3>PhD in Computer Science</h3>
             <div class="timeline-meta">University of Colorado Boulder</div>
-            <p>Research: recommender systems, interpretability, and controllable machine learning.
+            <p>Research: recommender systems, interpretability, and controllable machine learning.</p>
           </div>
         </div>
 
@@ -782,79 +733,43 @@
       </section>
 
       <section id="awards">
-        <h2 class="section-title">Honors & Awards</h2>
+        <h2 class="section-title">Honors &amp; Awards</h2>
+        <div class="compact-list">
+          <div class="compact-label">2026</div>
+          <div class="compact-text"><strong>Outstanding Teaching Assistant Award</strong>, CS Department, University of Colorado Boulder</div>
 
-        <div class="award-item">
-          <div class="award-date">Jan 2026</div>
-          <div class="award-content">
-            <h3>Outstanding Teaching Assistant Award from CS Department</h3>
-            <div class="award-meta">Computer Science · University of Colorado Boulder</div>
-          </div>
-        </div>
+          <div class="compact-label">2026</div>
+          <div class="compact-text"><strong>WSDM NSF Conference Travel Grant</strong>, National Science Foundation</div>
 
-        <div class="award-item">
-          <div class="award-date">Jan 2026</div>
-          <div class="award-content">
-            <h3>WSDM NSF Conference Travel Grant</h3>
-            <div class="award-meta">National Science Foundation (NSF)</div>
-          </div>
-        </div>
+          <div class="compact-label">2025</div>
+          <div class="compact-text"><strong>Departmental Summer Research Fellowship</strong>, CS Department, University of Colorado Boulder</div>
 
-        <div class="award-item">
-          <div class="award-date">Jan 2025</div>
-          <div class="award-content">
-            <h3>Departmental Summer Research Fellowship</h3>
-            <div class="award-meta">Computer Science · University of Colorado Boulder</div>
-          </div>
-        </div>
+          <div class="compact-label">2024</div>
+          <div class="compact-text"><strong>SIGIR Conference Student Travel Grant</strong>, SIGIR</div>
 
-        <div class="award-item">
-          <div class="award-date">Jan 2024</div>
-          <div class="award-content">
-            <h3>SIGIR Conference Student Travel Grant</h3>
-            <div class="award-meta">SIGIR</div>
-          </div>
-        </div>
+          <div class="compact-label">2023</div>
+          <div class="compact-text"><strong>Dean’s and Departmental Excellence Fellowship</strong>, CS Department, University of Colorado Boulder</div>
 
-        <div class="award-item">
-          <div class="award-date">Jan 2023</div>
-          <div class="award-content">
-            <h3>Dean’s and Departmental Excellence Fellowship</h3>
-            <div class="award-meta">Computer Science · University of Colorado Boulder</div>
-          </div>
-        </div>
-
-        <div class="award-item">
-          <div class="award-date">Jan 2023</div>
-          <div class="award-content">
-            <h3>Early Career Professional Development Fellowship</h3>
-            <div class="award-meta">Computer Science · University of Colorado Boulder</div>
-          </div>
+          <div class="compact-label">2023</div>
+          <div class="compact-text"><strong>Early Career Professional Development Fellowship</strong>, CS Department, University of Colorado Boulder</div>
         </div>
       </section>
 
       <section id="skills">
         <h2 class="section-title">Technical Skills</h2>
-        <div class="skills">
-          <strong>Programming</strong>
-          <div>Python, C++, JavaScript</div>
+        <div class="compact-list skills">
+          <div class="compact-label">Programming</div>
+          <div class="compact-text">Python, C++, JavaScript</div>
 
-          <strong>Machine Learning</strong>
-          <div>PyTorch, TensorFlow, Hugging Face, scikit-learn, CUDA, Transformers</div>
+          <div class="compact-label">Machine Learning</div>
+          <div class="compact-text">PyTorch, TensorFlow, Hugging Face, scikit-learn, CUDA, Transformers</div>
 
-          <strong>Recommender Systems</strong>
-          <div>Ranking, Sequential Recommendation, Personalization, Concept Bottleneck Models, Counterfactual Explanations, Steering</div>
+          <div class="compact-label">Recommender Systems</div>
+          <div class="compact-text">Ranking, Sequential Recommendation, Personalization, Concept Bottleneck Models, Counterfactual Explanations, Steering</div>
 
-          <strong>Engineering</strong>
-          <div>Docker, Podman, Git, CI/CD</div>
+          <div class="compact-label">Engineering</div>
+          <div class="compact-text">Docker, Podman, Git, CI/CD</div>
         </div>
-      </section>
-
-      <section id="contact">
-        <h2 class="section-title">Contact</h2>
-          <a href="mailto:meysam.varasteh@colorado.edu">meysam.varasteh@colorado.edu</a>
-          
-        </p>
       </section>
     </main>
   </div>
