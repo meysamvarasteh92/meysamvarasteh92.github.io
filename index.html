@@ -507,7 +507,6 @@
     <div class="masthead-inner">
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#home">About</a>
-        <a href="#research">Current Focus</a>
         <a href="#publications">Projects</a>
         <a href="#education">Education</a>
         <a href="#awards">Awards</a>
@@ -563,6 +562,18 @@
         </p>
       </div>
 
+      <section id="research">
+        <h2 class="section-title">Current Focus</h2>
+
+        <article class="research-item">
+          <h3>Concept-Based Steering for Recommender Systems</h3>
+          <p class="research-subtitle">Interpretability · Controllability · Concept Bottleneck Models</p>
+          <p>
+            Building post-hoc concept representations that make pretrained recommenders interpretable and directly steerable, while preserving their ranking behavior. I am now extending this work to LLM-based recommenders, studying how concept-level interventions on internal representations can steer their recommendations more reliably than prompt-based control.
+          </p>
+        </article>
+      </section>
+
       <section id="news">
         <h2 class="section-title">News</h2>
         <div class="news-list">
@@ -577,17 +588,6 @@
         </div>
       </section>
 
-      <section id="research">
-        <h2 class="section-title">Current Focus</h2>
-
-        <article class="research-item">
-          <h3>Concept-Based Steering for Recommender Systems</h3>
-          <p class="research-subtitle">Interpretability · Controllability · Concept Bottleneck Models</p>
-          <p>
-            Building post-hoc concept representations that make pretrained recommenders interpretable and directly steerable, while preserving their ranking behavior. I am now extending this work to LLM-based recommenders, studying how concept-level interventions on internal representations can steer their recommendations more reliably than prompt-based control.
-          </p>
-        </article>
-      </section>
 
       <section id="publications">
         <h2 class="section-title">Projects</h2>
@@ -756,8 +756,7 @@
   <script>
     (function () {
       var groups = {
-        home: ['about', 'news'],
-        research: ['research'],
+        home: ['about', 'research', 'news'],
         publications: ['publications'],
         education: ['education'],
         awards: ['awards'],
@@ -771,7 +770,7 @@
 
       function show() {
         var key = location.hash.replace('#', '');
-        if (key === 'about' || key === 'news' || !groups[key]) key = 'home';
+        if (key === 'about' || key === 'news' || key === 'research' || !groups[key]) key = 'home';
         var ids = groups[key];
         Array.prototype.forEach.call(content.children, function (el) {
           el.classList.remove('tab-visible', 'tab-last', 'tab-single');
