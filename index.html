@@ -493,16 +493,26 @@
       .news-list { grid-template-columns: 1fr; gap: 2px; }
       .news-text { margin-bottom: 11px; }
     }
+    .nav-links a.active, .nav-links a.active:hover { color: #111; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 8px; }
+    .tabs-on .content > section,
+    .tabs-on .content > .intro { display: none; }
+    .tabs-on .content > .tab-visible { display: block; }
+    .tabs-on .content > section.tab-visible:first-child,
+    .tabs-on .content > section.tab-single { padding-top: 0; }
+    .tabs-on .content > .tab-last { border-bottom: 0; }
   </style>
 </head>
 <body>
   <header class="masthead">
     <div class="masthead-inner">
       <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#home">About</a>
         <a href="#research">Current Focus</a>
         <a href="#publications">Projects</a>
         <a href="#education">Education</a>
         <a href="#awards">Awards</a>
+        <a href="#service">Service</a>
+        <a href="#skills">Skills</a>
       </nav>
     </div>
   </header>
@@ -743,5 +753,45 @@
   </div>
 
   <footer>© 2026 Meysam Varasteh</footer>
+  <script>
+    (function () {
+      var groups = {
+        home: ['about', 'news'],
+        research: ['research'],
+        publications: ['publications'],
+        education: ['education'],
+        awards: ['awards'],
+        service: ['service'],
+        skills: ['skills']
+      };
+      var content = document.querySelector('.content');
+      var links = document.querySelectorAll('.nav-links a');
+      document.body.classList.add('tabs-on');
+      document.documentElement.style.scrollBehavior = 'auto';
+
+      function show() {
+        var key = location.hash.replace('#', '');
+        if (key === 'about' || key === 'news' || !groups[key]) key = 'home';
+        var ids = groups[key];
+        Array.prototype.forEach.call(content.children, function (el) {
+          el.classList.remove('tab-visible', 'tab-last', 'tab-single');
+        });
+        ids.forEach(function (id, i) {
+          var el = document.getElementById(id);
+          if (!el) return;
+          el.classList.add('tab-visible');
+          if (i === ids.length - 1) el.classList.add('tab-last');
+          if (key !== 'home') el.classList.add('tab-single');
+        });
+        Array.prototype.forEach.call(links, function (a) {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + key);
+        });
+        window.scrollTo(0, 0);
+      }
+
+      window.addEventListener('hashchange', show);
+      show();
+    })();
+  </script>
 </body>
 </html>
